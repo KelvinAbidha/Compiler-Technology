@@ -2,10 +2,10 @@
 
 A Lex (Flex) program that reads text from standard input and reports:
 
-- the number of words
-- the total number of characters in those words
+- The number of words
+- The total number of characters in those words
 
-A word is any sequence of one or more English letters (`A-Z` or `a-z`). Numbers, punctuation, whitespace, and other characters are ignored.
+A word is a sequence of one or more English letters (`A-Z` or `a-z`). Numbers, punctuation, whitespace, and other characters are ignored.
 
 ## Requirements
 
@@ -20,7 +20,7 @@ gcc lex.yy.c -o wordcount
 ./wordcount
 ```
 
-Enter text and press `Ctrl+D` on Linux/macOS (or `Ctrl+Z` followed by Enter on Windows) to finish input.
+Enter text, then press `Ctrl+D` on Linux/macOS (or `Ctrl+Z` followed by Enter on Windows) to end input.
 
 ## Example
 
@@ -35,8 +35,8 @@ Output:
 ```text
 Enter text (Ctrl+D to end):
 
-Number of words: 4
-Total size of words (characters): 16
+Number of words: 3
+Total size of words (characters): 13
 ```
 
-The scanner counts `Hello`, `world`, `Lex`, and `2026` is excluded. Only letters count as part of words, so the character total is `5 + 5 + 3 = 13`, not 16. Wait, 2026 excluded; the words are 3. Update accurately.
+The scanner recognizes `Hello`, `world`, and `Lex` as words. The number `2026` is excluded. The character total is calculated as `5 + 5 + 3 = 13`.
